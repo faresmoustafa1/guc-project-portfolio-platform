@@ -1,16 +1,97 @@
-# React + Vite
+# GUC Project Portfolio Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web platform for GUC students, instructors and employers. Students show their academic projects as portfolios, instructors supervise and endorse that work, and employers find talent and post internships. An admin panel handles moderation and verification.
 
-Currently, two official plugins are available:
+Built by **Syntax Squad** for the Software Engineering course (Spring 2026).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Authentication**: login, password reset, change password, employer sign-up with a verification step
+- **Role-based access** for four roles: Student, Instructor, Employer and Admin
+- **Profiles**: student, instructor and company profiles, plus an instructor search
+- **Projects**: create and manage projects, view project details, team invitations
+- **Discovery**: browse projects and student portfolios, save favourites
+- **Internships**: employers post internships, students browse and apply
+- **Messaging and notifications** between users
+- **Admin panel**: dashboard, user and employer verification, courses, projects, appeals, link requests, flagged content and internships
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- [React 19](https://react.dev/)
+- [React Router 7](https://reactrouter.com/)
+- [Vite](https://vite.dev/)
+- ESLint
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> **Note:** There is no backend yet. All data comes from a mock data store (`src/data/DummyDataStore.js`) and is saved in the browser's `localStorage`.
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) 20.19 or newer
+- npm (comes with Node.js)
+
+### Installation
+
+```bash
+git clone https://github.com/faresmoustafa1/guc-project-portfolio-platform.git
+cd guc-project-portfolio-platform
+npm install
+```
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Available scripts
+
+| Command           | Description                           |
+| ----------------- | ------------------------------------- |
+| `npm run dev`     | Start the development server          |
+| `npm run build`   | Build the app for production (`dist/`) |
+| `npm run preview` | Preview the production build          |
+| `npm run lint`    | Run ESLint                            |
+
+## Demo Accounts
+
+You can log in with any of these mock accounts:
+
+| Role       | Email / Username                  | Password   |
+| ---------- | --------------------------------- | ---------- |
+| Student    | `ahmed.hassan@student.guc.edu.eg` | `password` |
+| Instructor | `dr.kamel@guc.edu.eg`             | `password` |
+| Employer   | `hr@techcorp.com`                 | `password` |
+| Admin      | `admin`                           | `admin123` |
+
+To reset the demo data, clear the site's `localStorage` in your browser's developer tools.
+
+## Project Structure
+
+```
+src/
+├── components/      # Shared UI components (e.g. Navbar)
+├── context/         # React context (authentication)
+├── data/            # Mock data store
+├── pages/
+│   ├── admin/       # Admin panel pages
+│   ├── auth/        # Login, sign-up, password pages
+│   ├── courses/
+│   ├── favorites/
+│   ├── internships/
+│   ├── invitations/
+│   ├── messages/
+│   ├── notifications/
+│   ├── portfolios/
+│   ├── profile/
+│   └── projects/
+├── App.jsx          # Routes and route guards
+└── main.jsx         # App entry point
+```
+
+## License
+
+This project was made for educational purposes as part of a university course.
