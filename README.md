@@ -4,6 +4,10 @@ A web platform for GUC students, instructors and employers. Students show their 
 
 Built by **Syntax Squad** for the Software Engineering course (Spring 2026).
 
+### 🔗 [Live Demo](https://faresmoustafa1.github.io/guc-project-portfolio-platform/)
+
+No setup needed: open the link and log in with one of the [demo accounts](#demo-accounts).
+
 ## Features
 
 - **Authentication**: login, password reset, change password, employer sign-up with a verification step
